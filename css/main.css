@@ -14,6 +14,8 @@
 7.0 - Utilities
         - Alignment
         - Screen reader
+        - Background Colors
+        - Buttons
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -34,24 +36,32 @@
 }
 
 html {
-    font-size: 1rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #1F1F1F;
+    line-height: 1.25em;
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
-    html {
-        font-size: 17px;
-     }
+    
 }
 
 @media only screen and (min-width: 1024px) {
-    html {
-        font-size: 17px;
-     }
+    
 }
 
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
+
+body {
+    background-color: #ECE6DD;
+}
+
+ul {
+    padding-left: 0;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -261,25 +271,51 @@ html {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-/*#bg-hand {
-    background: url(../img/hand.jpg) no-repeat center;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-clip: content-box;
-}*/
+/* ----- NAV ----- */
+
+nav li {
+    display: inline-block;
+    font-weight: 700;
+    margin: 0em .5rem;
+}
+
+nav a {
+    color: #1F1F1F;
+    text-decoration: none;
+}
+
+
+/* ----- HEADER LOGO ----- */
+
+header .col-lg-4 {
+    margin: 0 auto;
+}
+
+.col-lg-4 h1 {
+    margin-bottom: 0;
+}
+
+/* ----- HERO----- */
+
+header .bg-dark:before {
+    background: url(../img/1d8aed83-6e1f-404b-bd12-9ab5781fda47.jfif) no-repeat top;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+    -ms-background-size: contain;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
 
 
 /*--------------------------------------------------------------
     7.0 - UTILITIES
 -------------------------------------------------------------- */
 
-/* ----- ALIGNEMENT ----- */
+/* ----- BACKGROUND COLORS ----- */
 
-.col-center {
-    justify-content: center;
+.bg-dark {
+    background-color: #1F1F1F;
+    color: #ECE6DD;
 }
 
 /* ----- SCREEN READER ----- */

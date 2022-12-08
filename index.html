@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7dd4e11fa5.js" crossorigin="anonymous"></script>
 
 
 
@@ -13,86 +17,83 @@
 
 <body>
    <header>
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-sm-8 col-lg-4">
-                    <h1><a href="#"><img src="img/logo-avi.png"></a></h1>
-                </div>
-                <nav class="col-sm-10 col-lg-6">
-                    <ul>
-                        <li><a>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Projects</a></li>
-                        <li><a>Contacts</a></li>
-                    </ul>
-                </nav>
+        <div class="wrapper row">
+            <div class="col-sm-8 col-lg-4">
+                <h1><a href="#"><img src="img/logo-avi.png" alt="Avi Interiors" data-rjs="2" class="img-responsive"></a></h1>
             </div>
+            <nav class="col-sm-12 col-lg-6">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
         </div>
-        <div> <!--use :after to add bg color in css or bg shorthand-->
+        <div class="bg-dark">
             <div class="wrapper row">
-               <p>Mid-Century for the Modern.</p> 
-               <p><a>Let's Talk</a></p>
+                <div class="col-sm-10 col-lg-6">
+                    <p>Mid-Century for the Modern.</p> 
+                    <p class="btn"><a>Let's Talk</a></p>
+                </div>
             </div>
         </div>
    </header>
 
-   <main class="wrapper">
-        <div class="row">
-            <section class="col-sm-12 col-lg-6">
-                <header>
-                    <h2>A studio that gets it right.</h2>
-                </header>
+   <main>
+        <section class="wrapper row">
+            <div class="col-sm-12 col-lg-6">
+                <h2>A studio that gets it right.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </p>
-            </section>
-
-            <section class="col-sm-12 col-lg-6">
-                <header>
-                    <div></div>
-                </header>
-                <p><a>About The Studio</a></p>
-            </section>
-        </div>
-        <div>
-            <h2>Unique Mid-Century Creations for the modern home-owner.</h2>
-            <div class="row">
-                <section>
-                    <header>
-                        <div></div>
-                    </header>
-                    <h3>This is what we do.</h3>
-                    <p>Sed do ut eiusmod tempor incididunt Sut labore et dolore magna aliqua.</p>
-                    <p><a>Explore Projects</a></p>
-                </section>
-                <section>
-                    <header>
-                        <div></div>
-                    </header>
-                    <h3>Meet your dream team.</h3>
-                    <p>Sed do ut eiusmod tempor incididunt Sut labore et dolore magna aliqua.</p>
-                    <p><a>Contact Us</a></p>
-                </section>
             </div>
+            <div class="col-sm-12 col-lg-6">
+                <img src="img/icon-avi.png" alt="Avi Interiors" data-rjs="2" class="img-responsive"></img>
+                <p class="btn"><a>About The Studio</a></p>
+            </div>
+        </section>
+        <div class="bg-dark">
+            <section class="wrapper">
+                <header>
+                    <h2>Unique Mid-Century Creations for the modern home-owner.</h2>
+                </header>
+                <div class="row">
+                    <section class="col-sm-12 col-lg-6">
+                        <header>
+                            <div></div>
+                            <h3>This is what we do.</h3>
+                        </header>
+                        <p>Sed do ut eiusmod tempor incididunt Sut labore et dolore magna aliqua.</p>
+                        <p class="btn"><a>Explore Projects</a></p>
+                    </section>
+                    <section class="col-sm-12 col-lg-6">
+                        <header>
+                            <div></div>
+                            <h3>Meet your dream team.</h3>
+                        </header>
+                        <p>Sed do ut eiusmod tempor incididunt Sut labore et dolore magna aliqua.</p>
+                        <p class="btn"><a>Contact Us</a></p>
+                    </section>
+                </div>
+            </section>
         </div>
    </main>
 
-   <footer>
-        <div class="wrapper">
-            <div class="col-sm-6">
-                <img>
-            </div>
-            <address>
-                <ul>
-                    <li><a>888.123.4567</a></li>
-                    <li><a>contact@aviinteriors.com</a></li>
-                </ul>
-            </address>
+   <footer class="wrapper">
+        <a href="#">
+            <img src="img/logo-avi.png" alt="Avi Interiors" data-rjs="2" class="img-responsive">
+        </a>
+        <address>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><a>888.123.4567</a></li>
+                <li><a>contact@aviinteriors.com</a></li>
             </ul>
-        </div>
-   </footer>
+        </address>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
