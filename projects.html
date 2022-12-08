@@ -29,24 +29,26 @@
                 </ul>
             </nav>
         </div>
+        <div id="bg-hero-projects"></div>
         <div class="bg-dark">
             <div class="wrapper">
                 <div class="col-sm-12 col-lg-8">
                     <h1>Projects</h1> 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
                 </div>
-                <form class="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    <input type="text" placeholder="Search.." name="search">
+                <form class="col-sm-10 col-lg-6">
+                    <label for="search" class="sr-only"></label>
+                    <button type="submit"><span class="fa-solid fa-magnifying-glass"></span></button>
+                    <input type="search" placeholder="Search..." name="search" id="search">
                 </form>
             </div>
         </div>
    </header>
 
    <main>
-        <div>
+        <div id="featured-img">
             <div class="wrapper row">
-                <section class="col-sm-12 col-lg-6">
+                <section class="col-sm-12 col-lg-7">
                     <header>
                         <h2>Featured Projects</h2>
                     </header>
@@ -64,23 +66,23 @@
         <div class="bg-dark">
             <div class="wrapper">
                 <div class="row">
-                    <div class="col-sm-6 col-lg-4">
-                        <div></div>
+                    <div class="col-sm-6 col-lg-4 photo-grid">
+                        <div id="bg-blue-carpet"></div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div></div>
+                    <div class="col-sm-6 col-lg-4 photo-grid">
+                        <div id="bg-orange-shower"></div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div></div>
+                    <div class="col-sm-6 col-lg-4 photo-grid">
+                        <div id="bg-mustard-kitchen"></div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div></div>
+                    <div class="col-sm-6 col-lg-4 photo-grid">
+                        <div id="bg-teal-couch"></div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div></div>
+                    <div class="col-sm-6 col-lg-4 photo-grid">
+                        <div id="bg-kitchen-island"></div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div></div>
+                    <div class="col-sm-6 col-lg-4 photo-grid">
+                        <div id="bg-maze-wallpaper"></div>
                     </div>
                 </div>
                 <p><a>More</a></p>
@@ -89,20 +91,21 @@
    </main>
 
    <footer class="wrapper">
-        <a href="#">
-            <img src="img/logo-avi.png" alt="Avi Interiors" data-rjs="2" class="img-responsive">
-        </a>
-        <address>
-            <ul>
-                <li><a>888.123.4567</a></li>
-                <li><a>contact@aviinteriors.com</a></li>
-            </ul>
-        </address>
+    <a href="#">
+        <img src="img/logo-avi.png" alt="Avi Interiors" data-rjs="2" class="img-responsive">
+    </a>
+    <address>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="tel:+18881234567">888.123.4567</a></li>
+            <li>|</li>
+            <li><a href="mailto:contact@aviinteriors.com">contact@aviinteriors.com</a></li>
         </ul>
+    </address>
+    <ul>
+        <li><span class="fa-brands fa-square-facebook"></span></li>
+        <li><span class="fa-brands fa-square-instagram"></span></li>
+        <li><span class="fa-brands fa-houzz"></span></li>
+    </ul>
     </footer>
 
 

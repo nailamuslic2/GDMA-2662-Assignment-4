@@ -36,7 +36,7 @@
 }
 
 html {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: #1F1F1F;
     line-height: 1.25em;
@@ -276,12 +276,16 @@ ul {
 nav li {
     display: inline-block;
     font-weight: 700;
-    margin: 0em .5rem;
+    margin: 0em .35rem;
 }
 
 nav a {
     color: #1F1F1F;
     text-decoration: none;
+}
+
+nav {
+    margin: 0 auto;
 }
 
 
@@ -304,6 +308,7 @@ header .bg-dark:before {
     -ms-background-size: contain;
     -webkit-background-size: contain;
     background-size: contain;
+    content: '';
 }
 
 
