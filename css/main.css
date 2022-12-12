@@ -14,7 +14,6 @@
 7.0 - Utilities
         - Alignment
         - Screen reader
-        - Background Colors
         - Buttons
 --------------------------------------------------------------*/
 
@@ -36,7 +35,7 @@
 }
 
 html {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #1F1F1F;
     line-height: 1.25em;
@@ -55,14 +54,6 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
-body {
-    background-color: #ECE6DD;
-}
-
-ul {
-    padding-left: 0;
-}
-
 @media only screen and (min-width: 768px) {
 
 }
@@ -72,6 +63,21 @@ ul {
 }
 
 /* ----- TYPOGRAPHY ----- */
+
+body {
+    background-color: #ECE6DD;
+}
+
+ul {
+    padding-left: 0;
+    font-size: .95rem;
+}
+
+h2 {
+    font-size: 2.15rem;
+    line-height: 1.15em;
+    font-weight: 600;
+}
 
 
 
@@ -88,7 +94,7 @@ ul {
 }
 
 [class*='col-'] {
-    padding: 10px;
+    padding: .3em;
 }
 
 .img-responsive {
@@ -275,8 +281,8 @@ ul {
 
 nav li {
     display: inline-block;
-    font-weight: 700;
-    margin: 0em .35rem;
+    font-weight: 600;
+    margin: 0em .65rem;
 }
 
 nav a {
@@ -286,30 +292,83 @@ nav a {
 
 nav {
     margin: 0 auto;
+    padding-top: 0;
+    margin-bottom: .65em;
 }
 
 
-/* ----- HEADER LOGO ----- */
+/* ----- HERO ----- */
 
 header .col-lg-4 {
     margin: 0 auto;
+    padding-bottom: 0;
 }
 
 .col-lg-4 h1 {
-    margin-bottom: 0;
+    margin-bottom: .25em;
+    margin-top: 1em;
 }
 
-/* ----- HERO----- */
+.col-lg-5 > p:first-child {
+    font-size: 2.45rem;
+    line-height: 1.3em;
+    margin-top: .7em;
+}
 
-header .bg-dark:before {
-    background: url(../img/1d8aed83-6e1f-404b-bd12-9ab5781fda47.jfif) no-repeat top;
-    -o-background-size: contain;
-    -moz-background-size: contain;
-    -ms-background-size: contain;
-    -webkit-background-size: contain;
-    background-size: contain;
+header .col-lg-5 {
+    margin: 0 auto;
+}
+
+header .bg-dark {
+    padding-bottom: 2em;
+}
+
+/* ----- OVERLAP-IMG ----- */
+
+header .overlap-img:before {
+    background: url(../img/bg-beige-library.jpg) no-repeat center;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
     content: '';
+    width: 100%;
+    height: 202px;
+    display: inline-block;
 }
+
+
+
+/* ----- ABOUT SECTION ----- */
+
+main .col-sm-8 {
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
+main .col-sm-12:first-child p {
+    margin-top: 0;
+}
+
+main .col-sm-12:last-child img {
+    margin: 0.25em 0 2em;
+}
+
+main > section {
+    padding: .25em 0 3em;
+}
+
+/* ----- CARD-VERT ----- */
+
+
+
+/* ----- TILE ----- */
+
+
+
+/* ----- FOOTER ----- */
+
 
 
 /*--------------------------------------------------------------
@@ -321,6 +380,14 @@ header .bg-dark:before {
 .bg-dark {
     background-color: #1F1F1F;
     color: #ECE6DD;
+}
+
+/* ----- BUTTONS ----- */
+
+.btn {
+    color: #6BA779;
+    border: #6BA779 .25em solid;
+    padding: .65em 1.5rem;
 }
 
 /* ----- SCREEN READER ----- */
