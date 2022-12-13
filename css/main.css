@@ -26,7 +26,6 @@
 *,
 *:after,
 *:before {
-    font-family: 'Open Sans', sans-serif;
     -o-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -35,6 +34,7 @@
 }
 
 html {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     color: #1F1F1F;
@@ -88,8 +88,9 @@ h3 {
     text-underline-offset: 40%;
 }
 
-
-
+a {
+    text-decoration: none;
+}
 /*--------------------------------------------------------------
     5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -347,6 +348,26 @@ header .col-lg-4 {
 form {
     margin: 0 auto;
     margin-top: .5em;
+    position: relative;
+    border: .25em solid #ECE6DD;
+    padding: 1em;
+    font-size: .9rem;
+}
+
+input {
+    background-color: transparent;
+    color: #ECE6DD;
+    border: none;
+    text-align: right;
+}
+
+button {
+    position: absolute;
+    background-color: transparent;
+    color: #ECE6DD;
+    border: none;
+    left: 5em;
+    text-align: center;
 }
 
 #bg-hero + .bg-dark {
@@ -477,21 +498,72 @@ main .bg-dark:last-child {
 
 /* ----- TILE ----- */
 
+#bg-blue-carpet {
+    background: url(../img/bg-blue-carpet.jpg) no-repeat center;
+}
+
+#bg-orange-shower {
+    background: url(../img/bg-orange-shower.jpg) no-repeat center;
+}
+
+#bg-mustard-kitchen {
+    background: url(../img/bg-mustard-kitchen.jpg) no-repeat center;
+}
+
+#bg-teal-couch {
+    background: url(../img/bg-teal-couch.jpg) no-repeat center;
+}
+
+#bg-kitchen-island {
+    background: url(../img/bg-kitchen-island.jpg) no-repeat center;
+}
+
+#bg-maze-wallpaper {
+    background: url(../img/bg-maze-wallpaper.jpg) no-repeat center;
+}
+
 .tile {
-    content: '';
-    display: block;
-    height: 2em;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+    -ms-background-size: contain;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 10.95rem;
+    height: 11em;
+    margin: .35em;
+}
+
+.tile header {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
     width: 100%;
 }
 
-#bg-blue-carpet {
-    background: url(../img/bg-blue-carpet.jpg) no-repeat center;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+.tile:hover header {
+    bottom: 0;
 }
+
+.tile h3,
+.tile p {
+    color: #ECE6DD;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+
+.tile h3 {
+    font-size: 1rem;
+    margin-top: 4em;
+}
+
+.tile:first-child 
 
 /* ----- FOOTER ----- */
 
@@ -521,6 +593,9 @@ address a {
 
 footer span {
     font-size: 2rem;
+    margin: .25em;
+    display: inline-block;
+    color: #1F1F1F;
 }
 
 

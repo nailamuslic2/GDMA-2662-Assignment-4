@@ -36,58 +36,90 @@
                     <h1>Projects</h1> 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p>
                 </div>
-                <form class="col-sm-10 col-lg-6">
-                    <label for="search" class="sr-only"></label>
+                <form class="col-sm-10 col-lg-6"> 
+                    <label for="search" class="sr-only">search</label>
+                    <input type="search" placeholder="Search Projects..." name="search" id="search">
                     <button type="submit"><span class="fa-solid fa-magnifying-glass"></span></button>
-                    <input type="search" placeholder="Search..." name="search" id="search">
                 </form>
             </div>
         </div>
    </header>
 
    <main>
-        <div class="overlap-img">
-            <div class="wrapper row">
-                <section class="col-sm-12 col-lg-7">
-                    <header>
-                        <h2>Featured Projects</h2>
-                    </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <ul>
-                        <li>Quis nostrud exercitation.</li>
-                        <li>Lorem ipsum dolor sit amet, consect.</li>
-                        <li>Adipiscing elit, sed do.</li>
-                        <li>Eiusmod tempor incididunt ut labore.</li>
-                        <li>Et dolore magna aliqua.</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="bg-dark">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="col-sm-6 col-lg-4 tile">
-                        <div id="bg-blue-carpet"></div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 tile">
-                        <div id="bg-orange-shower"></div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 tile">
-                        <div id="bg-mustard-kitchen"></div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 tile">
-                        <div id="bg-teal-couch"></div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 tile">
-                        <div id="bg-kitchen-island"></div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 tile">
-                        <div id="bg-maze-wallpaper"></div>
+        <section>
+            <div class="overlap-img">
+                <div class="wrapper row">
+                    <div class="col-sm-12 col-lg-7">
+                        <header>
+                            <h2>Featured Projects</h2>
+                        </header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>Quis nostrud exercitation.</li>
+                            <li>Lorem ipsum dolor sit amet, consect.</li>
+                            <li>Adipiscing elit, sed do.</li>
+                            <li>Eiusmod tempor incididunt ut labore.</li>
+                            <li>Et dolore magna aliqua.</li>
+                        </ul>
                     </div>
                 </div>
-                <p><a>More</a></p>
             </div>
-        </div>
+            <div class="bg-dark">
+                <div class="wrapper">
+                    <div class="row">
+                        <a href="#">
+                            <section class="col-sm-6 col-lg-4 tile" id="bg-blue-carpet">
+                                <header>
+                                    <h3>Commercial</h3>
+                                    <p>June 2022</p>
+                                </header>
+                            </section>
+                        </a>
+                        <a href="#">
+                            <section class="col-sm-6 col-lg-4 tile" id="bg-orange-shower">
+                                <header>
+                                    <h3>Commercial</h3>
+                                    <p>March 2021</p>
+                                </header>
+                            </section>
+                        </a>
+                        <a href="#">  
+                            <section class="col-sm-6 col-lg-4 tile" id="bg-mustard-kitchen">
+                                <header>
+                                    <h3>AirBnb</h3>
+                                    <p>July 2019</p>
+                                </header>
+                            </section>
+                        </a>
+                        <a href="#"> 
+                            <section class="col-sm-6 col-lg-4 tile" id="bg-teal-couch">
+                                <header>
+                                    <h3>AirBnb</h3>
+                                    <p>November 2020</p>
+                                </header>
+                            </section>
+                        </a>
+                        <a href="#">
+                            <section class="col-sm-6 col-lg-4 tile" id="bg-kitchen-island">
+                                <header>
+                                    <h3>Residential</h3>
+                                    <p>August 2019</p>
+                                </header>
+                            </section>
+                        </a>
+                        <a href="#">
+                            <section class="col-sm-6 col-lg-4 tile" id="bg-maze-wallpaper">
+                                <header>
+                                    <h3>Residential</h3>
+                                    <p>April 2022</p>
+                                </header>
+                            </section>
+                        </a>
+                    </div>
+                    <p><a class="btn" href="#">More</a></p>
+                </div>
+            </div>
+        </section>
    </main>
 
    <footer class="wrapper">
@@ -102,9 +134,9 @@
         </ul>
     </address>
     <ul>
-        <li><span class="fa-brands fa-square-facebook"></span></li>
-        <li><span class="fa-brands fa-square-instagram"></span></li>
-        <li><span class="fa-brands fa-houzz"></span></li>
+        <li><a href="www.facebook.com"><span class="fa-brands fa-square-facebook"></span></a></li>
+        <li><a href="www.instagram.com"><span class="fa-brands fa-square-instagram"></span></a></li>
+        <li><a href="www.houzz.com"><span class="fa-brands fa-houzz"></span></a></li>
     </ul>
 </footer>
 
