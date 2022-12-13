@@ -9,7 +9,18 @@
         - Typography
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks (classes and IDs)
         - Framework
+        - SM display
+        - MD display
+        - LG display
 6.0 - Components: specific designed components (modular widgets that visually look the same but have one difference)
+        - Nav
+        - Hero
+        - Overlap-Img
+        - About section
+        - Featured Prjects
+        - Card-vert
+        - Tile
+        - Footer
 
 7.0 - Utilities
         - Alignment
@@ -73,15 +84,18 @@ ul {
     font-size: .95rem;
 }
 
+h2,
+h3 {
+    font-weight: 600;
+}
+
 h2 {
     font-size: 2.15rem;
     line-height: 1.15em;
-    font-weight: 600;
 }
 
 h3 {
     font-size: 1.7rem;
-    font-weight: 600;
     text-decoration: underline;
     text-decoration-color: #F1EC6D;
     text-decoration-thickness: .15em;
@@ -91,6 +105,15 @@ h3 {
 a {
     text-decoration: none;
 }
+
+@media only screen and (min-width: 1024px) {
+
+    
+
+}
+
+
+
 /*--------------------------------------------------------------
     5.0 - OBJECTS
 -------------------------------------------------------------- */
@@ -100,7 +123,7 @@ a {
 .row {
     display: flex;
     justify-content: space-between;
-    flex-flow: wrap;
+    flex-flow: row wrap;
 }
 
 [class*='col-'] {
@@ -307,10 +330,29 @@ nav {
 }
 
 
+@media only screen and (min-width: 1024px) {
+
+    nav li {
+        font-size: 1.065rem;
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+
+    nav {
+        margin: 1em 0;
+    }
+
+    nav ul {
+            padding-right: 0;
+            text-align: right;
+        }
+}
+
 /* ----- HERO ----- */
 
 header .col-lg-5,
-header .col-lg-4 {
+header .col-lg-4,
+form {
     margin: 0 auto;
 }
 
@@ -346,7 +388,6 @@ header .col-lg-4 {
 }
 
 form {
-    margin: 0 auto;
     margin-top: .5em;
     position: relative;
     border: .25em solid #ECE6DD;
@@ -354,18 +395,19 @@ form {
     font-size: .9rem;
 }
 
-input {
+input,
+button {
     background-color: transparent;
     color: #ECE6DD;
     border: none;
+}
+
+input {
     text-align: right;
 }
 
 button {
     position: absolute;
-    background-color: transparent;
-    color: #ECE6DD;
-    border: none;
     left: 5em;
     text-align: center;
 }
@@ -373,6 +415,30 @@ button {
 #bg-hero + .bg-dark {
     padding-bottom: 2.5em;
 }
+
+@media only screen and (min-width: 1024px) {
+
+    header .col-lg-4 {
+        padding-top: 1.75em;
+        margin-left: 0;
+    }
+
+    .overlap-img .col-lg-5 {
+        text-align: left;
+        margin-left: 28.5rem;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+    .overlap-img .col-lg-5 > p:first-child {
+        font-size: 3.15rem;
+        line-height: 1.25em;
+        margin-top: .7em;
+    }
+
+}
+
+
 
 /* ----- OVERLAP-IMG ----- */
 
@@ -399,6 +465,63 @@ main .overlap-img:before {
     content: '';
     width: 100%;
     display: inline-block;
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    header .overlap-img:before {
+        content: '';
+        top: 5.8em;
+        left: -17rem;
+        position: absolute;
+        height: 400.7px;
+    }
+
+}
+
+/* ----- ABOUT SECTION ----- */
+
+#about .col-sm-8 {
+    margin: 0rem;
+    padding-bottom: 0;
+}
+
+#about div:first-child p {
+    margin-top: 0;
+}
+
+#about img {
+    margin: 0.25em 0 2em;
+}
+
+#about {
+    padding: .25em 0 3em;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #about .col-sm-8 {
+        text-align: left;
+        margin-top: 1em;
+    }
+
+    #about div:first-child p {
+        text-align: left;
+        font-size: 1.13rem;
+        line-height: 1.25em;
+    }
+
+    #about h2 {
+        font-size: 2.23rem;
+    }
+
+    #about img {
+        margin-top: 3em;
+        height: 8em;
+        margin-bottom: 3em;
+    }
+
 }
 
 /*----- FEATURED PROJECTS-----*/
@@ -441,29 +564,11 @@ main li:before {
     
 }
 
-/* ----- ABOUT SECTION ----- */
-
-#about .col-sm-8 {
-    margin: 0 auto;
-    padding-bottom: 0;
-}
-
-#about div:first-child p {
-    margin-top: 0;
-}
-
-#about img {
-    margin: 0.25em 0 2em;
-}
-
-#about {
-    padding: .25em 0 3em;
-}
-
 /* ----- CARD-VERT ----- */
 
 main .bg-dark:last-child {
-    padding: 2em 0em .5em;
+    padding-top: 2em;
+    padding-bottom: 0;
 }
 
 .card-vert:first-child div {
@@ -488,12 +593,32 @@ main .bg-dark:last-child {
 .card-vert p {
     font-size: 1.25rem;
     line-height: 1.35em;
-    margin: 2em 0;
+    margin: 2.5em 0;
 }
 
 .card-vert p:last-child {
     font-size: 1rem;
-    margin-bottom: 3.75em;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .bg-dark .col-lg-8 {
+        margin: 0 auto;
+        margin-bottom: 3em;
+    }
+
+    .card-vert h3 {
+        font-size: 1.25rem;
+        margin-top: 2em;
+    }
+
+    .card-vert p {
+        font-size: 1rem;
+        line-height: 1.35em;
+        margin: 2em 2rem 3.25em;
+    }
+
+
 }
 
 /* ----- TILE ----- */
@@ -563,9 +688,27 @@ main .bg-dark:last-child {
     margin-top: 4em;
 }
 
-.tile:first-child 
+#bg-blue-carpet,
+#bg-orange-shower {
+    margin-top: 2em;
+}
+
+#bg-kitchen-island,
+#bg-maze-wallpaper {
+    margin-bottom: 2em;
+}
 
 /* ----- FOOTER ----- */
+
+footer span,
+address a {
+    color: #1F1F1F;
+}
+
+footer span,
+footer li {
+    display: inline-block;
+}
 
 footer .col-sm-6 {
     margin: 0 auto;
@@ -580,7 +723,6 @@ address {
 }
 
 footer li {
-    display: inline-block;
     font-style: normal;
 }
 
@@ -588,14 +730,15 @@ address a {
     text-decoration: none;
     font-size: .9rem;
     font-weight: 700;
-    color: #1F1F1F;
 }
 
 footer span {
     font-size: 2rem;
     margin: .25em;
-    display: inline-block;
-    color: #1F1F1F;
+}
+
+main .bg-dark:last-of-type {
+    padding-bottom: 4em;
 }
 
 
@@ -616,6 +759,11 @@ footer span {
     color: #6BA779;
     border: #6BA779 .25em solid;
     padding: .65em 1.5rem;
+}
+
+.btn:hover {
+    background-color: #6BA779;
+    color: #1F1F1F;
 }
 
 /* ----- SCREEN READER ----- */
