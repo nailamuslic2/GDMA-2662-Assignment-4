@@ -79,6 +79,15 @@ h2 {
     font-weight: 600;
 }
 
+h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #F1EC6D;
+    text-decoration-thickness: .15em;
+    text-underline-offset: 40%;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -299,34 +308,68 @@ nav {
 
 /* ----- HERO ----- */
 
+header .col-lg-5,
 header .col-lg-4 {
     margin: 0 auto;
-    padding-bottom: 0;
+}
+
+
+header .col-lg-4 {
+    padding: 2em 0 .1em;
 }
 
 .col-lg-4 h1 {
-    margin-bottom: .25em;
-    margin-top: 1em;
+    margin: 0em;
 }
 
-.col-lg-5 > p:first-child {
+.overlap-img .col-lg-5 > p:first-child {
     font-size: 2.45rem;
     line-height: 1.3em;
     margin-top: .7em;
 }
 
-header .col-lg-5 {
-    margin: 0 auto;
+#bg-hero {
+    background: url(../img/bg-chartreuse-dining-room.jpg) no-repeat center;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 7em;
 }
 
-header .bg-dark {
-    padding-bottom: 2em;
+.col-sm-12 > h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: .5em;
+}
+
+#bg-hero + .bg-dark {
+    padding-bottom: 2.5em;
 }
 
 /* ----- OVERLAP-IMG ----- */
 
 header .overlap-img:before {
     background: url(../img/bg-beige-library.jpg) no-repeat center;
+    height: 202px;
+}
+
+header .overlap-img {
+    padding-bottom: 2em;
+}
+
+main .overlap-img:before {
+    background: url(../img/bg-conversation-pit.jpg) no-repeat center;
+    height: 360px;
+}
+
+.overlap-img:before {
     -o-background-size: cover;
     -moz-background-size: cover;
     -ms-background-size: cover;
@@ -334,41 +377,151 @@ header .overlap-img:before {
     background-size: cover;
     content: '';
     width: 100%;
-    height: 202px;
     display: inline-block;
 }
 
+/*----- FEATURED PROJECTS-----*/
 
+.col-lg-7 h2 {
+    margin-top: 1em;
+}
+
+main ul {
+    margin-top: 2em;
+    text-align: left;
+    margin-left: 3rem;
+    list-style-type: none;
+    margin-bottom: 3.5em;
+}
+
+main li {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 0rem;
+    margin-bottom: .5em;
+    line-height: 1.65em;
+}
+
+main li:before {
+    background: url(../img/bullet-right-arrow.svg) no-repeat;
+    content: '';
+    width: 1.25rem;
+    height: 1.25em;
+    display: block;
+    position: absolute;
+    top: .2rem;
+    left: -2rem;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+    -ms-background-size: contain;
+    -webkit-background-size: contain;
+    background-size: contain;
+    
+}
 
 /* ----- ABOUT SECTION ----- */
 
-main .col-sm-8 {
+#about .col-sm-8 {
     margin: 0 auto;
     padding-bottom: 0;
 }
 
-main .col-sm-12:first-child p {
+#about div:first-child p {
     margin-top: 0;
 }
 
-main .col-sm-12:last-child img {
+#about img {
     margin: 0.25em 0 2em;
 }
 
-main > section {
+#about {
     padding: .25em 0 3em;
 }
 
 /* ----- CARD-VERT ----- */
 
+main .bg-dark:last-child {
+    padding: 2em 0em .5em;
+}
 
+.card-vert:first-child div {
+    background: url(../img/bg-front-door.jpg) no-repeat center;
+}
+
+.card-vert:last-child div {
+    background: url(../img/bg-team-photo.jpg) no-repeat center;
+}
+
+.card-vert:first-child div,
+.card-vert:last-child div {
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 16em;
+}
+
+.card-vert p {
+    font-size: 1.25rem;
+    line-height: 1.35em;
+    margin: 2em 0;
+}
+
+.card-vert p:last-child {
+    font-size: 1rem;
+    margin-bottom: 3.75em;
+}
 
 /* ----- TILE ----- */
 
+.tile {
+    content: '';
+    display: block;
+    height: 2em;
+    width: 100%;
+}
 
+#bg-blue-carpet {
+    background: url(../img/bg-blue-carpet.jpg) no-repeat center;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 
 /* ----- FOOTER ----- */
 
+footer .col-sm-6 {
+    margin: 0 auto;
+}
+
+footer {
+    padding: 1.75em 0;
+}
+
+address {
+    margin: 1.25em 0;
+}
+
+footer li {
+    display: inline-block;
+    font-style: normal;
+}
+
+address a {
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #1F1F1F;
+}
+
+footer span {
+    font-size: 2rem;
+}
 
 
 /*--------------------------------------------------------------
