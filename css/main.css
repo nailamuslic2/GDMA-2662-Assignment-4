@@ -7,6 +7,7 @@
         - Universal
 4.0 - Elements: styling for bare/generic HTML elements (just h1, etc, p, ul,) (make subsections for tables and forms, etc) (no classes or IDs, but you can use direct descendant and first child as long as no classes etc) (img would have the media subhead; Headings, Paragraphs, Blockquotes, Anchors, table, form, image, content)
         - Typography
+        - Forms
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks (classes and IDs)
         - Framework
         - SM display
@@ -26,6 +27,7 @@
         - Alignment
         - Screen reader
         - Buttons
+        - Overlap-img
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -54,24 +56,22 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
-    
+
+    html {
+        font-size: 1.0625rem;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
-    
+
+    html {
+        font-size: 1.125rem;
+    }
 }
 
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
-
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 1024px) {
-    
-}
 
 /* ----- TYPOGRAPHY ----- */
 
@@ -81,21 +81,14 @@ body {
 
 ul {
     padding-left: 0;
-    font-size: .95rem;
-}
-
-h2,
-h3 {
-    font-weight: 600;
 }
 
 h2 {
-    font-size: 2.15rem;
-    line-height: 1.15em;
+    font: 600 2.125rem/1.25em 'Open Sans', sans-serif;
 }
 
 h3 {
-    font-size: 1.7rem;
+    font: 600 1.719rem/1.1em 'Open Sans', sans-serif;
     text-decoration: underline;
     text-decoration-color: #F1EC6D;
     text-decoration-thickness: .15em;
@@ -106,13 +99,54 @@ a {
     text-decoration: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
 
-    
+    h2 {
+        font-size: 2.06rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
 
 }
 
+@media only screen and (min-width: 1024px) {
 
+    h2 {
+        font-size: 1.945rem;
+    }
+
+    h3 {
+        font-size: .5rem;
+    }
+
+}
+
+/* ----- FORMS ----- */
+
+form {
+    position: relative;
+    border: .25em solid #ECE6DD;
+    font-size: .9rem;
+}
+
+input,
+button {
+    background-color: transparent;
+    color: #ECE6DD;
+    border: none;
+}
+
+input {
+    text-align: right;
+}
+
+button {
+    position: absolute;
+    left: 5em;
+    text-align: center;
+}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -133,7 +167,6 @@ a {
 .img-responsive {
     max-width: 100%;
 }
-
 
 /* ----- SM DISPLAY ----- */
 
@@ -329,23 +362,39 @@ nav {
     margin-bottom: .65em;
 }
 
+@media only screen and (min-width: 768px) {
 
-@media only screen and (min-width: 1024px) {
+    nav a:hover {
+        border-bottom: #6BA779 .2em solid;
+    }
+
+    nav {
+        margin-top: .25em;
+        margin-right: 0;
+    }
 
     nav li {
-        font-size: 1.065rem;
         margin-left: 1rem;
         margin-right: 0;
     }
 
-    nav {
-        margin: 1em 0;
-    }
+}
+
+@media only screen and (min-width: 1024px) {
 
     nav ul {
-            padding-right: 0;
-            text-align: right;
+        padding-right: 0;
+        text-align: right;
         }
+
+    nav {
+        margin-top: .75em;
+    }
+
+    nav li {
+        margin-left: 1.5rem;
+    }
+
 }
 
 /* ----- HERO ----- */
@@ -356,19 +405,17 @@ form {
     margin: 0 auto;
 }
 
-
 header .col-lg-4 {
-    padding: 2em 0 .1em;
+    padding: 2.5em 0 .1em;
 }
 
 .col-lg-4 h1 {
     margin: 0em;
 }
 
-.overlap-img .col-lg-5 > p:first-child {
-    font-size: 2.45rem;
-    line-height: 1.3em;
-    margin-top: .7em;
+header .col-lg-5 > p:first-child {
+    font: 600 2.5rem/1.25em 'Open Sans', sans-serif;
+    margin-bottom: 1.15em;
 }
 
 #bg-hero {
@@ -382,100 +429,62 @@ header .col-lg-4 {
 }
 
 .col-sm-12 > h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.5em;
+    font: 600 2.5rem/1.6em 'Open Sans', sans-serif;
+    margin-bottom: 0;
 }
 
-form {
-    margin-top: .5em;
-    position: relative;
-    border: .25em solid #ECE6DD;
-    padding: 1em;
-    font-size: .9rem;
-}
-
-input,
-button {
-    background-color: transparent;
-    color: #ECE6DD;
-    border: none;
-}
-
-input {
-    text-align: right;
-}
-
-button {
-    position: absolute;
-    left: 5em;
-    text-align: center;
+header .bg-dark .col-lg-6 {
+    margin-top: 1.25em;
+    margin-bottom: .45em;
 }
 
 #bg-hero + .bg-dark {
     padding-bottom: 2.5em;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
+
+    header .col-lg-5 > p:first-child,
+    .col-sm-12 > h1 {
+        font-size: 2.6471rem;
+    }
+
+    #bg-hero {
+        height: 12em;
+    }
 
     header .col-lg-4 {
-        padding-top: 1.75em;
+        padding-top: 1.5em;
         margin-left: 0;
     }
 
-    .overlap-img .col-lg-5 {
-        text-align: left;
-        margin-left: 28.5rem;
-        margin-top: 1em;
-        margin-bottom: 2em;
-    }
-
-    .overlap-img .col-lg-5 > p:first-child {
-        font-size: 3.15rem;
-        line-height: 1.25em;
-        margin-top: .7em;
-    }
-
 }
-
-
-
-/* ----- OVERLAP-IMG ----- */
-
-header .overlap-img:before {
-    background: url(../img/bg-beige-library.jpg) no-repeat center;
-    height: 202px;
-}
-
-header .overlap-img {
-    padding-bottom: 2em;
-}
-
-main .overlap-img:before {
-    background: url(../img/bg-conversation-pit.jpg) no-repeat center;
-    height: 360px;
-}
-
-.overlap-img:before {
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    content: '';
-    width: 100%;
-    display: inline-block;
-}
-
 
 @media only screen and (min-width: 1024px) {
 
-    header .overlap-img:before {
-        content: '';
-        top: 5.8em;
-        left: -17rem;
-        position: absolute;
-        height: 400.7px;
+    #bg-hero {
+        height: 16em;
+    }
+
+    header .col-lg-4 {
+        padding-top: 1.75em;
+    }
+
+    header .col-lg-5 > p:first-child {
+        font-size: 2.778rem;
+        margin-top: 1.5em;
+    }
+
+    header .col-lg-5 p:last-child {
+        margin-bottom: 2em;
+    }
+
+    header .col-lg-5 {
+        margin-right: 0;
+    }
+
+    .col-sm-12 > h1 {
+        font-size: 2.821rem;
     }
 
 }
@@ -483,7 +492,7 @@ main .overlap-img:before {
 /* ----- ABOUT SECTION ----- */
 
 #about .col-sm-8 {
-    margin: 0rem;
+    margin: 0 auto;
     padding-bottom: 0;
 }
 
@@ -499,43 +508,54 @@ main .overlap-img:before {
     padding: .25em 0 3em;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
 
     #about .col-sm-8 {
         text-align: left;
         margin-top: 1em;
+        margin-left: 0;
     }
 
-    #about div:first-child p {
+    #about .col-md-6:first-child {
         text-align: left;
-        font-size: 1.13rem;
+        font-size: 1rem;
         line-height: 1.25em;
     }
 
-    #about h2 {
-        font-size: 2.23rem;
+
+    #about img {
+        height: 5em;
+        margin: 3em 0;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #about {
+        padding-bottom: 2em;
     }
 
     #about img {
-        margin-top: 3em;
-        height: 8em;
-        margin-bottom: 3em;
+        margin-top: 2.5em;
+        height: 6.85em;
+        margin-bottom: 2.5em;
     }
 
 }
 
 /*----- FEATURED PROJECTS-----*/
 
-.col-lg-7 h2 {
-    margin-top: 1em;
+.overlap-img h2 {
+    margin-bottom: 0.65em;
 }
 
 main ul {
-    margin-top: 2em;
+    margin-top: 1.5em;
     text-align: left;
     margin-left: 3rem;
     list-style-type: none;
-    margin-bottom: 3.5em;
+    margin-bottom: 1em;
 }
 
 main li {
@@ -544,14 +564,14 @@ main li {
     left: 0;
     margin-left: 0rem;
     margin-bottom: .5em;
-    line-height: 1.65em;
+    line-height: 1.6em;
 }
 
 main li:before {
-    background: url(../img/bullet-right-arrow.svg) no-repeat;
+    background: url(../img/bullet-right-arrow.png) no-repeat;
     content: '';
-    width: 1.25rem;
-    height: 1.25em;
+    width: 1rem;
+    height: 1em;
     display: block;
     position: absolute;
     top: .2rem;
@@ -560,15 +580,22 @@ main li:before {
     -moz-background-size: contain;
     -ms-background-size: contain;
     -webkit-background-size: contain;
-    background-size: contain;
-    
+    background-size: contain; 
+}
+
+@media only screen and (min-width: 768px) {
+
+    .overlap-img .col-sm-12 {
+        text-align: left;
+    }
+
 }
 
 /* ----- CARD-VERT ----- */
 
-main .bg-dark:last-child {
-    padding-top: 2em;
-    padding-bottom: 0;
+main .bg-dark {
+    padding-top: 1em;
+    padding-bottom: .5em;
 }
 
 .card-vert:first-child div {
@@ -588,16 +615,29 @@ main .bg-dark:last-child {
     background-size: cover;
     width: 100%;
     height: 16em;
+    margin-top: 0;
 }
 
 .card-vert p {
-    font-size: 1.25rem;
-    line-height: 1.35em;
-    margin: 2.5em 0;
+    font: 600 1.25rem/1.4em 'Open Sans', sans-serif;
+    margin: 2em 0 2.5em;
 }
 
 .card-vert p:last-child {
     font-size: 1rem;
+    margin-bottom: 3.75em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .bg-dark .col-md-9 {
+        margin: 0 auto;
+    }
+
+    .card-vert p {
+        font-size: 1.1rem;
+    }
+
 }
 
 @media only screen and (min-width: 1024px) {
@@ -608,58 +648,79 @@ main .bg-dark:last-child {
     }
 
     .card-vert h3 {
-        font-size: 1.25rem;
-        margin-top: 2em;
+        font-size: 1.112rem;
+        margin-top: 1.5em;
     }
 
     .card-vert p {
-        font-size: 1rem;
+        font-size: .89rem;
         line-height: 1.35em;
         margin: 2em 2rem 3.25em;
     }
 
+    .col-md-9 h2 {
+        margin: 1em 0 2em;
+    }
+
+    .card-vert:first-child div,
+    .card-vert:last-child div {
+        height: 15em;
+    }
+
+    .card-vert p:last-child {
+        margin-bottom: 4em;
+    }
 
 }
 
 /* ----- TILE ----- */
 
 #bg-blue-carpet {
-    background: url(../img/bg-blue-carpet.jpg) no-repeat center;
+    background-image: url(../img/bg-blue-carpet.jpg);
 }
 
 #bg-orange-shower {
-    background: url(../img/bg-orange-shower.jpg) no-repeat center;
+    background-image: url(../img/bg-orange-shower.jpg);
 }
 
 #bg-mustard-kitchen {
-    background: url(../img/bg-mustard-kitchen.jpg) no-repeat center;
+    background-image: url(../img/bg-mustard-kitchen.jpg);
 }
 
 #bg-teal-couch {
-    background: url(../img/bg-teal-couch.jpg) no-repeat center;
+    background-image: url(../img/bg-teal-couch.jpg);
 }
 
 #bg-kitchen-island {
-    background: url(../img/bg-kitchen-island.jpg) no-repeat center;
+    background-image: url(../img/bg-kitchen-island.jpg);
 }
 
 #bg-maze-wallpaper {
-    background: url(../img/bg-maze-wallpaper.jpg) no-repeat center;
+    background-image: url(../img/bg-maze-wallpaper.jpg);
 }
 
 .tile {
-    -o-background-size: contain;
-    -moz-background-size: contain;
-    -ms-background-size: contain;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
     position: relative;
     top: 0;
     left: 0;
     overflow: hidden;
-    width: 10.95rem;
-    height: 11em;
-    margin: .35em;
+    height: 11.5em;
+    margin-top: .25em;
+    padding-left: .4rem;
+    padding-right: .4rem;
+}
+
+main .overlap-img + .bg-dark {
+    padding-top: 3.25em;
+    padding-bottom: 4em;
 }
 
 .tile header {
@@ -684,18 +745,42 @@ main .bg-dark:last-child {
 }
 
 .tile h3 {
-    font-size: 1rem;
-    margin-top: 4em;
+    font: 600 1rem/0em 'Open Sans', sans-serif;
+    margin-top: 5em;
 }
 
-#bg-blue-carpet,
-#bg-orange-shower {
-    margin-top: 2em;
+main .overlap-img + .bg-dark .wrapper > p {
+    margin-top: 3em;
 }
 
-#bg-kitchen-island,
-#bg-maze-wallpaper {
-    margin-bottom: 2em;
+@media only screen and (min-width: 768px) {
+
+   .tile {
+        height: 18.9em;
+   }
+
+   .tile h3,
+   .tile p {
+        font-size: 1.25rem;
+   }
+
+   .tile h3 {
+        margin-top: 7em;
+   }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .tile {
+        height: 14.35em;
+    }
+
+    .tile h3,
+    .tile p {
+        font-size: 1rem;
+   }
+
 }
 
 /* ----- FOOTER ----- */
@@ -710,12 +795,12 @@ footer li {
     display: inline-block;
 }
 
-footer .col-sm-6 {
-    margin: 0 auto;
+footer {
+    padding: 1.75em 0 1em;
 }
 
-footer {
-    padding: 1.75em 0;
+footer .col-sm-6 {
+    margin: 0 auto;
 }
 
 address {
@@ -727,9 +812,8 @@ footer li {
 }
 
 address a {
+    font: 700 .845rem 'Open Sans', sans-serif;
     text-decoration: none;
-    font-size: .9rem;
-    font-weight: 700;
 }
 
 footer span {
@@ -737,9 +821,25 @@ footer span {
     margin: .25em;
 }
 
-main .bg-dark:last-of-type {
-    padding-bottom: 4em;
-}
+@media only screen and (min-width: 768px) {
+
+    address a {
+        font-size: .9rem;
+    }
+
+    address a:hover {
+        border-bottom: #6BA779 .2em solid;
+    }
+ 
+ }
+
+ @media only screen and (min-width: 1024px) {
+
+    footer {
+        padding: 2.5em 0 1.5em;
+    }
+
+ }
 
 
 /*--------------------------------------------------------------
@@ -761,9 +861,115 @@ main .bg-dark:last-of-type {
     padding: .65em 1.5rem;
 }
 
-.btn:hover {
-    background-color: #6BA779;
-    color: #1F1F1F;
+@media only screen and (min-width: 768px) {
+
+    .btn:hover {
+        background-color: #6BA779;
+        color: #1F1F1F;
+    }
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .btn {
+        font-size: .89rem;
+    }
+
+}
+
+/* ----- OVERLAP-IMG ----- */
+
+header .overlap-img:before,
+.overlap-img {
+    left: 0;
+}
+
+.overlap-img,
+.overlap-img:before {
+    top: 0;
+}
+
+header .overlap-img:before {
+    background-image: url(../img/bg-beige-library.jpg);
+    height: 200px;
+}
+
+main .overlap-img:before {
+    background-image: url(../img/bg-conversation-pit.jpg);
+    right: 0;
+    height: 355px;
+}
+
+.overlap-img {
+    position: relative;
+    padding-bottom: 2.5em;
+}
+
+.overlap-img:before {
+    background-repeat: no-repeat;
+    background-position: center;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    content: '';
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+
+header .overlap-img > .row {
+    padding-top: 12em;
+}
+
+main .overlap-img > .row {
+    padding-top: 23em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    header .overlap-img:before {
+        width: 50%;
+    }
+
+    main .overlap-img:before {
+        width: 45%;
+    }
+
+    header .overlap-img:before,
+    main .overlap-img:before {
+        height: 100%;
+    }
+
+    header .overlap-img > .row {
+        justify-content: flex-end;
+        text-align: left;
+        padding-top: 0;
+    }
+
+    header .col-lg-5 {
+        margin-right: 0;
+    }
+
+    main .overlap-img > .row {
+        padding-top: 0;
+    }
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    main .overlap-img:before {
+        width: 45%;
+    }
+
+    .overlap-img {
+        padding-bottom: 1.5em;
+    }
 }
 
 /* ----- SCREEN READER ----- */
