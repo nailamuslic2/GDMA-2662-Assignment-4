@@ -16,18 +16,17 @@
 6.0 - Components: specific designed components (modular widgets that visually look the same but have one difference)
         - Nav
         - Hero
-        - Overlap-Img
         - About section
-        - Featured Prjects
+        - Featured Projects
         - Card-vert
         - Tile
         - Footer
 
 7.0 - Utilities
-        - Alignment
-        - Screen reader
+        - Background colors
         - Buttons
         - Overlap-img
+        - Screen reader
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -867,7 +866,6 @@ footer span {
         background-color: #6BA779;
         color: #1F1F1F;
     }
-
 
 }
 
